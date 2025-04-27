@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Content and Styles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Dynamic Webpage with JavaScript</h1>
+  </header>
+
+  <section>
+    <article>
+      <h2>Change Text Content</h2>
+      <p id="textContent">This is some text that will be changed.</p>
+      <button onclick="changeText()">Change Text</button>
+    </article>
+
+    <article>
+      <h2>Change Style</h2>
+      <p id="styleText">This text will change its color.</p>
+      <button onclick="changeStyle()">Change Style</button>
+    </article>
+
+    <article>
+      <h2>Add or Remove an Element</h2>
+      <div id="dynamicContent">
+        <p>This is the original content.</p>
+      </div>
+      <button onclick="addRemoveElement()">Add/Remove Element</button>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
