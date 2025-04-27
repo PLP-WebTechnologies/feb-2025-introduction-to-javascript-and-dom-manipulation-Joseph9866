@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        .dynamic-text {
+            font-size: 20px;
+            color: blue;
+        }
+        .new-element {
+            background-color: lightgreen;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Webpage with JavaScript</h1>
+
+    <p id="textContent" class="dynamic-text">This is a static text.</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="modifyStyle()">Change Style</button>
+    <button onclick="addOrRemoveElement()">Add/Remove Element</button>
+
+    <div id="elementContainer"></div>
+
+    <script>
+        // Function to change the text content dynamically
+        function changeText() {
+            document.getElementById("textContent").textContent = "The text has been changed!";
+        }
+
+        // Function to modify CSS styles via JavaScript
+        function modifyStyle() {
+            const textElement = document.getElementById("textContent");
+            textElement.style.color = "red";
+            textElement.style.fontSize = "30px";
+        }
+
+        // Function to add or remove an element when the button is clicked
+        function addOrRemoveElement() {
+            const container = document.getElementById("elementContainer");
+            // Check if the element already exists
+            if (container.innerHTML === "") {
+                const newElement = document.createElement("div");
+                newElement.classList.add("new-element");
+                newElement.textContent = "This is a new element!";
+                container.appendChild(newElement);
+            } else {
+                container.innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
